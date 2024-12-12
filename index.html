@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Your Preferences to Check Your Eligibility</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="subtitles">
+        <h1>Add Your Preferences to Check Your Eligibility</h1>
+        <h2 id="pg1">Preferences</h2>
+        <h2 id="pg2">Education Details</h2>
+        <h2 id="pg3">Contact Information</h2>
+    </div>
+  <div class="container">
+
+    <!-- Page 1: Preferences -->
+    <form id="form">
+      <div class="page" id="page1">
+
+        <label>When do you want to study abroad?</label>
+        <div class="options">
+          <button type="button" class="btn">Jan 2025</button>
+          <button type="button" class="btn">May/Sep 2025</button>
+          <button type="button" class="btn">Year 2026</button>
+        </div>
+
+        <label>What is your IELTS/PTE/Duolingo Status?</label>
+        <div class="options">
+          <button type="button" class="btn">Not Decided</button>
+          <button type="button" class="btn">Planning to Book</button>
+          <button type="button" class="btn">Booked my Exam</button>
+          <button type="button" class="btn">Already Given</button>
+        </div>
+
+        <label>What's your preferred program?</label>
+        <div class="options">
+          <button type="button" class="btn">Master's</button>
+          <button type="button" class="btn">PG Diploma</button>
+          <button type="button" class="btn">MBA</button>
+          <button type="button" class="btn">Bachelor's</button>
+          <button type="button" class="btn">PhD</button>
+          <button type="button" class="btn">Not Decided</button>
+        </div>
+
+        <button type="button" class="next-btn" onclick="nextPage(2)">Next</button>
+      </div>
+
+      <!-- Page 2: Education Details -->
+      <div class="page" id="page2" style="display: none;">
+
+        <label for="currentCity">What is your current city?</label>
+        <input type="text" id="currentCity" placeholder="Enter your city">
+
+        <label>Do you have a valid passport?</label>
+        <div class="options">
+          <button type="button" class="btn">Yes</button>
+          <button type="button" class="btn">Applied</button>
+          <button type="button" class="btn">No</button>
+        </div>
+
+        <label>How can we help you?</label>
+        <div class="options">
+          <button type="button" class="btn">I want to check my Admit Eligibility</button>
+          <button type="button" class="btn">I want End to End Guidance</button>
+          <button type="button" class="btn">I want University Shortlist</button>
+          <button type="button" class="btn">I am not sure</button>
+        </div>
+
+        <label>What's your highest level of education?</label>
+        <div class="options">
+          <button type="button" class="btn">10th Standard</button>
+          <button type="button" class="btn">12th Standard</button>
+          <button type="button" class="btn">Bachelor's Degree</button>
+          <button type="button" class="btn">Master's Degree</button>
+          <button type="button" class="btn">MBBS/MD</button>
+        </div>
+
+        <button type="button" class="prev-btn" onclick="prevPage(1)">Previous</button>
+        <button type="button" class="next-btn" onclick="nextPage(3)">Next</button>
+      </div>
+
+      <!-- Page 3: Contact Information -->
+      <div class="page" id="page3" style="display: none;">
+
+        <label for="name">Enter Your Name</label>
+        <input type="text" id="name" placeholder="Enter your name">
+
+        <label for="phone">Enter Your Phone Number</label>
+        <input type="tel" id="phone" placeholder="Enter your phone number">
+
+        <label for="email">Enter Your Email</label>
+        <input type="email" id="email" placeholder="Enter your email">
+
+        <button type="button" class="prev-btn" onclick="prevPage(2)">Previous</button>
+        <button type="submit" class="submit-btn">Submit</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
